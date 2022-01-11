@@ -174,12 +174,13 @@
     .todo {
       width: 100vw;
       height: 80vh;
-      transform: translateY(60px);
+      transform: translateY(35px);
 
       &-title {
         text-align: center;
         padding: 5px;
         font-size: 25px;
+        transform: translateY(6px);
         // background-color: #f1f4f6;
       }
       &-input {
