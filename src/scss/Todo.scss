@@ -1,0 +1,166 @@
+.container {
+  background-color: #d5e0ec;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .todo {
+    width: 50vw;
+    height: 70vh;
+    background-color: #f1f4f6;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-title {
+      text-align: center;
+      padding: 10px;
+      font-size: 25px;
+      background-color: #f1f4f6;
+    }
+    &-input {
+      width: 90%;
+      // background-color: #1d99ff;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+
+      &-text {
+        // flex-grow: 1;
+        // margin: 0px 5px;
+        // margin-left: 40px;
+        font-size: 17px;
+        width: 87%;
+        border: 2px solid transparent;
+        transition: all 0.3s ease-in;
+        outline: none;
+        padding: 4px 20px;
+        border-radius: 5px;
+        color: white;
+        // background-color: #1d99ff;
+        background-color: #6ebeff;
+      }
+      &-text:focus {
+        border: 2px solid rgb(149, 61, 231);
+      }
+      &-btn {
+        // background-color: green;
+        padding: 4px 5px;
+        border-radius: 5px;
+        font-size: 17px;
+        border: none;
+        outline: none;
+        background-color: rgb(149, 61, 231);
+        color: white;
+        cursor: pointer;
+        // margin-right: 30px;
+        .btn-text {
+          padding: 10px;
+        }
+      }
+      &-btn:hover {
+        background-color: rgb(139, 46, 226);
+      }
+    }
+  }
+}
+
+.todo-list--items {
+  height: 280px;
+  overflow-y: scroll;
+  // background-color: #1d99ff;
+  padding: 10px;
+  padding: 4px 10px;
+  margin: auto;
+
+  // height: 500px;
+}
+
+.todo-list {
+  width: 95%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  // background-color: rgb(78, 240, 3);
+  // color: rgb(234, 238, 234);
+  margin: auto;
+
+  &--item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // background-color: rgb(13, 188, 219);
+    border: 1px solid #49adff;
+    border-radius: 5px;
+    padding: 3px 15px;
+    overflow: hidden;
+    transform: translateX(8px);
+
+    .todovalue {
+      // color: red;
+      cursor: pointer;
+      // background-color: red;
+      .linethrough {
+        color: red;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: line-through;
+        transition: all 0.3s linear;
+      }
+      .line {
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s linear;
+        color: green;
+        cursor: pointer;
+      }
+    }
+    .todoicons {
+      display: flex;
+      color: blue;
+      .todo-fa-icons {
+        color: rgb(13, 14, 13);
+        // display: none;
+        position: relative;
+        .faCheck {
+          position: absolute;
+          top: 0px;
+          left: -120px;
+          color: green;
+        }
+        .faTime {
+          position: absolute;
+          top: 0px;
+          left: -120px;
+          color: red;
+        }
+        .facheck {
+          position: absolute;
+          left: -81px;
+          width: 60px;
+          background-color: rgb(44, 40, 40);
+          border-radius: 5px;
+          cursor: pointer;
+          .uncheck {
+            color: rgb(245, 241, 241);
+            font-size: 12px;
+            padding-left: 3px;
+          }
+          .check {
+            color: rgb(245, 245, 248);
+            font-size: 13px;
+            padding-left: 10px;
+          }
+        }
+      }
+      .todo-del-icons {
+        color: rgb(255, 0, 179);
+        cursor: pointer;
+      }
+    }
+  }
+}

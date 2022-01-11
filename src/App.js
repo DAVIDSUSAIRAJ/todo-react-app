@@ -1,11 +1,12 @@
+import TodoApp from "./components/Todo";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>hello world</h1>
+        <TodoApp />
       </header>
     </div>
   );
